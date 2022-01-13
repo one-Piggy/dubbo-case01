@@ -12,10 +12,12 @@ import java.io.IOException;
  * @create: 2022-01-06 14:02
  */
 public class MainApplication {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         ClassPathXmlApplicationContext ios = new ClassPathXmlApplicationContext("consumer.xml");
         OrderService bean = ios.getBean(OrderService.class);
         bean.initOrder("1");
+
+        System.out.println("调用完成");
         System.in.read();
     }
 }

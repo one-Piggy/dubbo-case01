@@ -1,12 +1,15 @@
 package com.sgg.gmall.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.sgg.gmall.bean.UserAddress;
 import com.sgg.gmall.service.UserService;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-
+@Service //暴露接口服务，dubbo下的service
+@Component
 public class UserServiceImpl implements UserService {
 
 	@Override
